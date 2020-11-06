@@ -57,7 +57,7 @@ if settings.REGISTRATION_DJANGO_AUTH_URLS_ENABLE:
             name=prefix+'password_change'+suffix),
         url(r'^password/change/done/$', auth_views.PasswordChangeDoneView.as_view(),
             name=prefix+'password_change_done'+suffix),
-        url(r'^password/reset/$', auth_views.PasswordResetDoneView.as_view(),
+        url(r'^password/reset/$', auth_views.PasswordResetView.as_view(),
             name=prefix+'password_reset'+suffix, kwargs=dict(
                 post_reset_redirect=prefix+'password_reset_done'+suffix)),
         url(password_reset_confirm_rule,
